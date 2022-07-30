@@ -100,10 +100,10 @@
           </cite>
         </div>
         <div class="feedback__control-wrapper">
-          <button class="feedback__button feedback__button--previous" type="button">
+          <button class="feedback__button feedback__button--previous button" type="button">
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
-          <button class="feedback__button feedback__button--next" type="button">
+          <button class="feedback__button feedback__button--next button" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
@@ -162,19 +162,22 @@
 
     <section class="index-body__modal modal">
       <h2 class="modal__heading">Добавить в корзину</h2>
-      <h3 class="modal__choise-title">Выберите размер:</h3>
-      <ul class="modal__wrapper choise-list">
-        <li class="choise-list__item">
-          <button class="choise-list__button choise-button choise-button--current" type="button">S</button>
-        </li>
-        <li class="choise-list__item">
-          <button class="choise-list__button choise-button" type="button">M</button>
-        </li>
-        <li class="choise-list__item">
-          <button class="choise-list__button choise-button" type="button">L</button>
-        </li>
-      </ul>
-      <button class="modal__button modal-button">Добавить</button>
+      <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <legend class="modal-form__legend">Выберите размер:</legend>
+        <p class="modal-form__group">
+          <input class="modal-form__input modal-form__input-checked input" type="radio" name="radio-size" value="size-s" id="size-s" checked>
+          <label class="modal-form__label" for="size-s">s</label>
+        </p>
+        <p class="modal-form__group">
+          <input class="modal-form__input input" type="radio" name="radio-size" value="size-m" id="size-m">
+          <label class="modal-form__label" for="size-m">m</label>
+        </p>
+        <p class="modal-form__group">
+          <input class="modal-form__input input" type="radio" name="radio-size" value="size-l" id="size-l">
+          <label class="modal-form__label" for="size-l">l</label>
+        </p>
+        <button class="modal-form__button button" type="submit">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
