@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка, каталог товаров</title>
+</head>
+
+<body class="form-body">
+
+  <!-- Шапка сайта -->
+
+  <header class="form-body__header main-header">
+    <a class="main-header__logo-link logo-link" href="#">
+      <img class="main-header__logo-image logo-link__image" src="" alt="Логотип магазина Мишка.">
+    </a>
+    <button class="main-header__button-toggle button-toggle">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <ul class="main-header__list">
+      <li class="main-header__item">
+        <a class="main-header__link" href="#">Каталог товаров</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link" href="#">Вязание на заказ</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link main-header__link--search" href="#">Поиск по сайту</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link main-header__link--basket" href="#">Корзина: <span class="main-header__amount">пока
+            пуста</span></a>
+      </li>
+    </ul>
+
+    <main class="form-body__main form-main">
+      <h1 class="form-main__heading">Вязание на заказ</h1>
+
+      <section class="form-main__configurations configurations">
+        <h2 class="visually-hidden">Фильтры вязаного заказа</h2>
+        <p class="configurations__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="configurations__form configurations-form form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <!-- Радиокнопки -->
+
+          <fieldset class="configurations__fieldset configurations-form__radio-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">ТИП</legend>
+            <p class="configurations__group configurations-form__group configurations-form__group--checked">
+              <label class="configurations-form__radio-label" for="radio-accessory">Аксессуар для интерьера</label>
+              <input class="configurations-form__radio-input input" type="radio" name="radio-type" value="interior-accessory" id="radio-accessory" checked>
+              <span class="configurations-form__radio-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__radio-label" for="radio-toy">Детская игрушка</label>
+              <input class="configurations-form__radio-input input" type="radio" name="radio-type" value="toy" id="radio-toy">
+              <span class="configurations-form__radio-mark"></span>
+            </p>
+          </fieldset>
+
+          <!-- Чекбоксы -->
+
+          <fieldset class="configurations__fieldset configurations-form__checkbox-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">ЦВет</legend>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="white-color">Белый</label>
+              <input class="configurations-form__checkbox-input input" type="checkbox" name="white" value="white" id="white-color" checked>
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="gray-color">Серый</label>
+              <input class="configurations-form__checkbox-input configurations-form__checkbox-input--checked input" type="checkbox" name="gray" value="gray" id="gray-color" checked>
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="tiffani-color">Тиффани</label>
+              <input class="configurations-form__checkbox-input input" type="checkbox" name="tiffani" value="tiffani" id="tiffani-color">
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="black-color">Черный</label>
+              <input class="configurations-form__checkbox-input input" type="checkbox" name="black" value="black" id="black-color">
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="pink-color">Розовый</label>
+              <input class="configurations-form__checkbox-input input" type="checkbox" name="pink" value="pink" id="pink-color">
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+            <p class="configurations__group configurations-form__group">
+              <label class="configurations-form__checkbox-label" for="orange-color">Оранжевый</label>
+              <input class="configurations-form__checkbox-input input" type="checkbox" name="orange" value="orange" id="orange-color">
+              <span class="configurations-form__checkbox-mark"></span>
+            </p>
+          </fieldset>
+
+          <!-- ФИО -->
+
+          <fieldset class="configurations__fieldset configurations-form__name-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">ФИО</legend>
+            <p class="configurations__group configurations-form__name-group">
+              <label class="configurations-form__name-label" for="first-name">Имя:</label>
+              <input class="configurations-form__name-input configurations-form__name-input--required input" type="text" name="first-name" placeholder="Введите ваше имя*" id="first-name" required>
+            </p>
+            <p class="configurations__group configurations-form__name-group">
+              <label class="configurations-form__name-label" for="second-name">Фамилия:</label>
+              <input class="configurations-form__name-input configurations-form__name-input--required input" type="text" name="second-name" placeholder="Укажите фамилию*" id="second-name" required>
+            </p>
+            <p class="configurations__group configurations-form__name-group">
+              <label class="configurations-form__name-label" for="patronymic-name">Имя:</label>
+              <input class="configurations-form__name-input input" type="text" name="patronymic-name" placeholder="Отчество, если желаете" id="patronymic-name">
+            </p>
+          </fieldset>
+
+          <!-- Телефон -->
+
+          <fieldset class="configurations__fieldset configurations-form__tel-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">тел</legend>
+            <p class="configurations__group configurations-form__tel-group">
+              <label class="configurations-form__email-label" for="email">
+                <span class="visually-hidden">Введите ваш телефон</span>
+              </label>
+              <input class="configurations-form__tel-input input input--tel" type="tel" pattern="7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="tel" required>
+            </p>
+          </fieldset>
+
+          <!-- Email -->
+
+          <fieldset class="configurations__fieldset configurations-form__email-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">тел</legend>
+            <p class="configurations__group configurations-form__email-group">
+              <label class="configurations-form__email-label" for="email">
+                <span class="visually-hidden">Введите ваш емайл</span>
+              </label>
+              <input class="configurations-form__email-input input input--email" type="email" name="email" placeholder="Ваш Email*" id="email" required>
+            </p>
+          </fieldset>
+
+          <!-- Доп -->
+
+          <fieldset class="configurations__fieldset configurations-form__email-fieldset fieldset">
+            <legend class="configurations__legend configurations-form__legend form-legend">Доп</legend>
+            <label class="configurations-form__textarea-label" for="textarea"></label>
+            <textarea class="configurations-form__textarea-field name="textarea" id="textarea" placeholder="Опишите все ваши  пожелания к заказу" cols="30" rows="10"></textarea>
+            <p class="configurations-form__promt">*Поля обязательны для заполнения</p>
+          </fieldset>
+          <button class="configurations__submit button" type="submit"></button>
+        </form>
+      </section>
+
+      <!-- Подвал -->
+
+      <footer class="form-body__footer footer">
+        <a class="footer__logo-link logo-link" href="#">
+          <img class="footer__logo-image logo-link__image" src="" alt="Логотип магазина Мишка.">
+        </a>
+        <ul class="footer__social social-list">
+          <li class="footer__item social-list__item">
+            <a class="social-list__link" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="footer__item social-list__item">
+            <a class="social-list__link" href="#">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+          <li class="footer__item social-list__item">
+            <a class="social-list__link" href="#">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__developed-wrapper developed">
+          <span class="footer__developed-text developed__text">Разработано</span>
+          <a class="footer__developed-link developed__link" href="https://htmlacademy.ru/">
+            <img class="footer__developed-logo developed__logo" src="" alt="Логотип HTML-Academy.">
+          </a>
+        </div>
+      </footer>
+    </main>
+  </header>
