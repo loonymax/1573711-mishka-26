@@ -12,24 +12,24 @@
   <!-- Шапка сайта -->
 
   <header class="header">
-    <a class="header__logo-link logo-link" href="#">
-      <img class="header__logo-image logo-link__image" src="" alt="Логотип магазина Мишка.">
+    <a class="header__logo-link" href="index.html">
+      <img class="header__logo-image" src="./img/logos/logo-mobile.svg" width="85" height="34" alt="Логотип магазина Мишка.">
     </a>
-    <button class="header__button-toggle button-toggle">
+    <button class="header__button-toggle button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="header__list">
       <li class="header__item">
-        <a class="header__link" href="#">Каталог товаров</a>
+        <a class="header__link link" href="catalog.html">Каталог товаров</a>
       </li>
       <li class="header__item">
-        <a class="header__link" href="#">Вязание на заказ</a>
+        <a class="header__link link" href="form.html">Вязание на заказ</a>
       </li>
       <li class="header__item">
-        <a class="header__link header__link--search" href="#">Поиск по сайту</a>
+        <a class="header__link header__link--search link" href="#">Поиск по сайту</a>
       </li>
       <li class="header__item">
-        <a class="header__link header__link--basket" href="#">Корзина: <span class="header__amount">пока
+        <a class="header__link header__link--basket link" href="#">Корзина: <span class="header__amount">пока
             пуста</span></a>
       </li>
     </ul>
@@ -45,7 +45,7 @@
     <section class="catalog-main__products catalog-products">
       <h2 class="visually-hidden">Карточки товаров</h2>
       <div class="catalog-products__wrapper product-card">
-        <img class="product-card__image" src="" alt="">
+        <img class="product-card__image" src="./img/catalog-cards/catalog-card-1.jpg" alt="">
         <h3 class="product-card__heading">Зайчик-попрыгайчик</h3>
         <p class="product-card__description">Рост 30 см, вес 200 г</p>
         <div class="product-card__wrapper">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="catalog-products__wrapper product-card">
-        <img class="product-card__image" src="" alt="">
+        <img class="product-card__image" src="./img/catalog-cards/catalog-card-2.jpg" alt="">
         <h3 class="product-card__heading">Корзинка для белья</h3>
         <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
         <div class="product-card__wrapper">
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="catalog-products__wrapper product-card">
-        <img class="product-card__image" src="" alt="">
+        <img class="product-card__image" src="./img/catalog-cards/catalog-card-3.jpg" alt="">
         <h3 class="product-card__heading">Большая корзинка для игрушек</h3>
         <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
         <div class="product-card__wrapper">
@@ -79,42 +79,43 @@
       </div>
     </section>
 
+    <!-- Видео -->
+
     <section class="catalog-main__production production">
-      <h2 class="production__heading">Процесс производства</h2>
+      <h2 class="production__heading heading">Процесс производства</h2>
       <div class="production__video"></div>
-      <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-        появляются наши товары.</p>
-      <a class="production__link link" href="#">СДелать заказ</a>
+      <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a class="production__link link link--default" href="#">СДелать заказ</a>
     </section>
   </main>
 
   <!-- Подвал -->
 
   <footer class="footer">
-    <a class="footer__logo-link logo-link" href="#">
-      <img class="footer__logo-image logo-link__image" src="" alt="Логотип магазина Мишка.">
+    <a class="footer__logo-link" href="#">
+      <img class="footer__logo-image" src="./img/logos/footer-logo.svg" alt="Логотип магазина Мишка.">
     </a>
-    <ul class="footer__social">
-      <li class="footer__item">
-        <a class="footer__link" href="#">
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#">
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#">
           <span class="visually-hidden">YouTube</span>
         </a>
       </li>
-      <li class="footer__item">
-        <a class="footer__link" href="#">
+      <li class="social__item">
+        <a class="social__link social__link--telegram" href="#">
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
     </ul>
     <div class="footer__developed">
       <span class="footer__text">Разработано</span>
-      <a class="footer__dlink--url" href="https://htmlacademy.ru/">
-        <img class="footer__logo" src="" alt="Логотип HTML-Academy.">
+      <a class="footer__link" href="https://htmlacademy.ru/">
+        <img class="footer__logo" src="./img/htmlacademy.svg" width="26" height="34" alt="Логотип HTML-Academy.">
       </a>
     </div>
   </footer>
@@ -123,20 +124,20 @@
   <!-- Модальное окно -->
 
   <section class="modal">
-    <h2 class="modal__heading">Добавить в корзину</h2>
+    <h2 class="modal__heading heading">Добавить в корзину</h2>
     <p class="modal__text">Выберите размер:</p>
     <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="post">
       <p class="modal-form__group">
-        <input class="modal-form__input modal-form__input-checked input" type="radio" name="radio-size" value="size-s"
+        <input class="visually-hidden modal-form__input modal-form__input-checked" type="radio" name="radio-size" value="size-s"
           id="size-s" checked>
         <label class="modal-form__label" for="size-s">s</label>
       </p>
       <p class="modal-form__group">
-        <input class="modal-form__input input" type="radio" name="radio-size" value="size-m" id="size-m">
+        <input class="visually-hidden modal-form__input" type="radio" name="radio-size" value="size-m" id="size-m">
         <label class="modal-form__label" for="size-m">m</label>
       </p>
       <p class="modal-form__group">
-        <input class="modal-form__input input" type="radio" name="radio-size" value="size-l" id="size-l">
+        <input class="visually-hidden modal-form__input" type="radio" name="radio-size" value="size-l" id="size-l">
         <label class="modal-form__label" for="size-l">l</label>
       </p>
       <button class="modal-form__button button" type="submit">Добавить</button>

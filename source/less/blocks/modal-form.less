@@ -1,7 +1,8 @@
 .modal-form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
+  column-gap: 7px;
+  row-gap: 31px;
 }
 
 .modal-form__group {
@@ -11,3 +12,37 @@
 .modal-form__input {
   padding-top: 18px;
 }
+
+.modal-form__input-checked + .modal-form__label {
+  border-color: @lite-green;
+}
+
+.modal-form__label {
+  display: block;
+
+  padding: 18px 33px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+.modal-form__button {
+  grid-column: ~"1/-1";
+
+  padding: 18px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+
+  color: @white;
+  background-color: @lite-green;
+}
+
+
