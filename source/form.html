@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="form-body">
+<body class="page__body form-body">
 
   <!-- Шапка сайта -->
 
@@ -38,6 +38,8 @@
   <main class="form-body__main form-main">
     <h1 class="form-main__heading">Вязание на заказ</h1>
 
+    <!-- Форма заказа  -->
+
     <section class="form-main__configurations configurations">
       <h2 class="visually-hidden">Фильтры вязаного заказа</h2>
       <p class="configurations__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
@@ -49,14 +51,14 @@
         <fieldset class="configurations__fieldset fieldset">
           <legend class="configurations__legend">ТИП</legend>
           <p class="configurations__group configurations__group--checked">
-            <label class="configurations__radio-label" for="radio-accessory">Аксессуар для интерьера</label>
-            <input class="configurations__radio-input input" type="radio" name="radio-type"
+            <label class="configurations__radio-label label" for="radio-accessory">Аксессуар для интерьера</label>
+            <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type"
               value="interior-accessory" id="radio-accessory" checked>
             <span class="configurations__radio-mark"></span>
           </p>
           <p class="configurations__group">
-            <label class="configurations__radio-label" for="radio-toy">Детская игрушка</label>
-            <input class="configurations__radio-input input" type="radio" name="radio-type" value="toy"
+            <label class="configurations__radio-label label" for="radio-toy">Детская игрушка</label>
+            <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type" value="toy"
               id="radio-toy">
             <span class="configurations__radio-mark"></span>
           </p>
