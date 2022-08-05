@@ -1,45 +1,7 @@
 .fieldset {
   position: relative;
 
+  padding: 0;
+
   border: none;
-}
-
-.configurations__group {
-  display: flex;
-  align-items: center;
-}
-
-.configurations__radio-label {
-  margin-left: 19px;
-}
-
-.configurations__radio-mark {
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  box-sizing: border-box;
-
-  border: 2px solid @gray;
-  border-radius: 50%;
-
-  order: -1;
-}
-
-.configurations__radio-input:checked + .configurations__radio-mark {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 17px;
-    height: 17px;
-
-    background-color: @green;
-    border-radius: 50%;
-
-    transform: translate(-50%, -50%);
-  }
 }
