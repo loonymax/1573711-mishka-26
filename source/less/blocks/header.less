@@ -3,6 +3,11 @@
 
   background-color: @white;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 47% 53%;
+  }
 }
 
 .header__logo-link {
@@ -13,6 +18,10 @@
   margin-left: auto;
   margin-right: auto;
   padding: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .header__button-toggle {
@@ -23,7 +32,12 @@
   padding: 40px;
 }
 
-.header__list {
+.header__site-list {
+  margin: 0;
+  padding: 0;
+}
+
+.header__user-list {
   margin: 0;
   padding: 0;
 }
