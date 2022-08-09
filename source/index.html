@@ -12,7 +12,7 @@
 
   <!-- Шапка сайта -->
 
-  <header class="header">
+  <header class="header header__container">
     <a class="header__logo-link" href="#">
       <img class="header__logo-image" src="./img/logo-mobile.svg" width="85" height="34"
         alt="Логотип магазина Мишка.">
@@ -21,22 +21,25 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <ul class="header__site-list">
-      <li class="header__item">
+      <li class="header__site-item">
         <a class="header__link link" href="catalog.html">Каталог товаров</a>
       </li>
-      <li class="header__item">
+      <li class="header__site-item">
         <a class="header__link link" href="form.html">Вязание на заказ</a>
       </li>
     </ul>
     <ul class="header__user-list">
-      <li class="header__item">
-        <a class="header__link header__link--search link" href="#">Поиск по сайту</a>
+      <li class="header__user-item">
+        <a class="header__link header__link--search link" href="#">
+          <span class="header__text-menu">Поиск по сайту</span>
+        </a>
       </li>
-      <li class="header__item">
+      <li class="header__user-item">
         <a class="header__link header__link--basket link" href="#">Корзина: <span class="header__amount">пока
             пуста</span></a>
       </li>
     </ul>
+    <p class="header__promt">Бесплатная доставка по России</p>
   </header>
 
   <!-- Основное содержание -->
