@@ -3,15 +3,59 @@
 
   padding: 31px 0 36px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 292px 165px 126px;
+    grid-template-areas:
+      "title title feature"
+      "text image image"
+      "list image image"
+      "price image image"
+      "link image image";
+    column-gap: 42px;
+
+    width: 668px;
+    margin: 0 auto;
+    padding: 50px 0 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 132px 292px 525px;
+    column-gap: 43px 58px;
+    grid-template-areas:
+      "feature title image"
+      "feature text image"
+      "feature list image"
+      "feature price image"
+      "feature link image";
+
+      width: 1050px;
+      margin: 0 auto;
+      padding: 71px 0 96px;
+  }
 }
 
 .main-product__heading {
+  grid-area: title;
+
   margin: 0;
   margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 545px;
+    z-index: 1;
+  }
 }
 
 .main-product__feature {
   display: block;
+  grid-area: feature;
 
   margin-bottom: 17px;
 
@@ -19,16 +63,45 @@
   line-height: 20px;
 
   color: @lite-green;
+
+  @media (min-width: @tablet-width) {
+    width: 72px;
+    justify-self: end;
+
+    margin-right: 27px;
+
+    text-align: center;
+  }
 }
 
 .main-product__text {
+  grid-area: text;
+
   margin: 0;
   margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .main-product__list {
+  grid-area: list;
+
   margin: 0;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 109px;
+  }
 }
 
 .main-product__wrapper {
@@ -53,6 +126,7 @@
 
 .main-product__image {
   display: block;
+  grid-area: image;
 
   margin-bottom: 25px;
 }
@@ -60,6 +134,7 @@
 .main-product__price {
   display: flex;
   justify-content: center;
+  grid-area: price;
 
   margin-left: auto;
   margin-right: auto;
@@ -68,4 +143,12 @@
   font-size: 17px;
 
   color: @gray;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.main-product__link {
+  grid-area: link;
 }

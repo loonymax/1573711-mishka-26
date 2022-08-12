@@ -6,10 +6,27 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 47% 53%;
+    grid-template-columns: 320px 350px;
     grid-template-areas:
       "logo user-list"
       "site-list promt";
+
+    width: 668px;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 450px 150px 450px;
+    grid-template-areas:
+      "site-list logo user-list"
+      "trade-list trade-list promt";
+
+    width: 1050px;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
   }
 }
 
@@ -34,6 +51,10 @@
   right: 0;
 
   padding: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .header__site-list {
@@ -45,6 +66,17 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: start;
+    gap: 35px;
+  }
+}
+
+.header__site-item {
+  list-style-type: none;
+
+  border-top: 1px solid @lite-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
 
@@ -56,17 +88,11 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 24% 76%;
+    grid-template-columns: 85px 265px;
   }
-}
 
-.header__site-item {
-  list-style-type: none;
-
-  border-top: 1px solid @lite-gray;
-
-  @media (min-width: @tablet-width) {
-    border: none;
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
   }
 }
 
@@ -81,6 +107,23 @@
   }
 }
 
+.header__trade-list {
+  display: none;
+  grid-area: trade-list;
+
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    gap: 45px;
+  }
+}
+
+.header__trade-item {
+  list-style-type: none;
+}
+
 .header__link {
   display: block;
 
@@ -91,6 +134,22 @@
   font-size: 17px;
 
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+
+    font-size: 15px;
+
+    &--basket {
+      text-align: end;
+
+      font-size: 17px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+
+  }
 }
 
 .header__text-menu {
@@ -106,5 +165,10 @@
   @media (min-width: @tablet-width) {
     display: block;
     justify-self: end;
+    align-self: center;
+
+    margin: 0;
+
+    font-size: 15px;
   }
 }
