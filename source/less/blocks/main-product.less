@@ -22,7 +22,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 132px 292px 525px;
-    column-gap: 43px 58px;
+    column-gap: 43px;
     grid-template-areas:
       "feature title image"
       "feature text image"
@@ -30,9 +30,9 @@
       "feature price image"
       "feature link image";
 
-      width: 1050px;
-      margin: 0 auto;
-      padding: 71px 0 96px;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 71px 0 96px;
   }
 }
 
@@ -132,14 +132,14 @@
 }
 
 .main-product__price {
-  display: flex;
-  justify-content: center;
   grid-area: price;
+  display: block;
 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
 
+  text-align: center;
   font-size: 17px;
 
   color: @gray;
