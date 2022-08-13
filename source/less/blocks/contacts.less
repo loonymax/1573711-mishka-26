@@ -48,8 +48,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    row-gap: 32px;
     grid-template-columns: 327px;
+    row-gap: 32px;
+    width: 327px;
 
     &--secondary {
       grid-area: contacts;
@@ -113,7 +114,10 @@
   min-width: 230px;
 
   @media (min-width: @tablet-width) {
+    justify-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
     justify-self: start;
   }
 }
-
