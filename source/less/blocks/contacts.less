@@ -1,22 +1,79 @@
 .contacts {
   padding: 44px 0 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 69px 0 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 524px 527px;
+    grid-template-areas:
+      "contacts map"
+      "link map";
+    width: 1050px;
+
+    margin: 0 auto;
+    padding: 71px 0 105px;
+  }
 }
 
 .contacts__container {
+  display: grid;
+  row-gap: 30px;
   width: 260px;
 
   margin: 0 auto;
+
+  &--secondary {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 308px 335px;
+    row-gap: 49px;
+    column-gap: 25px;
+    width: 668px;
+
+    margin: 0 auto;
+
+    &--secondary {
+      margin-bottom: 49px;
+    }
+
+    &--default {
+      grid-template-columns: 1fr;
+      justify-self: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 32px;
+    grid-template-columns: 327px;
+
+    &--secondary {
+      grid-area: contacts;
+    }
+
+    &--default {
+      grid-area: link;
+      justify-self: start;
+      align-self: flex-end;
+      min-width: 230px;
+    }
+  }
 }
 
 .contacts__heading {
   margin: 0;
-  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~(1/-1);
+  }
 }
 
 .contacts__wrapper {
   display: flex;
-
-  margin-bottom: 30px;
 
   line-height: 30px;
 
@@ -40,4 +97,23 @@
 
 .contacts__map-wrapper {
   margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: map;
+  }
 }
+
+.contacts__link {
+  justify-self: center;
+  display: inline-block;
+  min-width: 230px;
+
+  @media (min-width: @tablet-width) {
+    justify-self: start;
+  }
+}
+
