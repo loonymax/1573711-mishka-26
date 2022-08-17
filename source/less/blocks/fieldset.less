@@ -1,7 +1,13 @@
 .fieldset {
   position: relative;
 
-  padding: 0;
-
   border: none;
+}
+
+.fieldset__container {
+  @media (min-width: @tablet-width) {
+    &--secondary {
+      background-color: #f1f1f1;
+    }
+  }
 }

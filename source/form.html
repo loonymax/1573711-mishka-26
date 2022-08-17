@@ -51,7 +51,7 @@
   </header>
 
   <main class="form-body__main form-main">
-    <h1 class="form-main__heading">Вязание на заказ</h1>
+    <h1 class="form-main__heading heading">Вязание на заказ</h1>
 
     <!-- Форма заказа  -->
 
@@ -63,122 +63,138 @@
 
         <!-- Радиокнопки -->
 
-        <fieldset class="configurations__fieldset configurations__fieldset--radio fieldset">
-          <legend class="configurations__legend">ТИП</legend>
-          <p class="configurations__group">
-            <label class="configurations__radio-label label" for="radio-accessory">Аксессуар для интерьера</label>
-            <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type"
-              value="interior-accessory" id="radio-accessory" checked>
-            <span class="configurations__radio-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--last">
-            <label class="configurations__radio-label label" for="radio-toy">Детская игрушка</label>
-            <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type" value="toy"
-              id="radio-toy">
-            <span class="configurations__radio-mark"></span>
-          </p>
-        </fieldset>
+        <div class="fieldset__container fieldset__container--default">
+          <fieldset class="configurations__fieldset configurations__fieldset--radio fieldset">
+            <legend class="configurations__legend">ТИП</legend>
+            <p class="configurations__group">
+              <label class="configurations__radio-label label" for="radio-accessory">Аксессуар для интерьера</label>
+              <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type"
+                value="interior-accessory" id="radio-accessory" checked>
+              <span class="configurations__radio-mark"></span>
+            </p>
+            <p class="configurations__group configurations__group--last">
+              <label class="configurations__radio-label label" for="radio-toy">Детская игрушка</label>
+              <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type" value="toy"
+                id="radio-toy">
+              <span class="configurations__radio-mark"></span>
+            </p>
+          </fieldset>
+        </div>
 
         <!-- Чекбоксы -->
 
-        <fieldset class="configurations__fieldset configurations__fieldset--checkbox fieldset">
-          <legend class="configurations__legend">ЦВет</legend>
-          <p class="configurations__group configurations__group--checkbox">
-            <label class="configurations__checkbox-label label" for="white-color">Белый</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="white" value="white"
-              id="white-color" checked>
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--checkbox">
-            <label class="configurations__checkbox-label label" for="gray-color">Серый</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="gray" value="gray"
-              id="gray-color" checked>
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--checkbox">
-            <label class="configurations__checkbox-label label" for="tiffani-color">Тиффани</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="tiffani" value="tiffani"
-              id="tiffani-color">
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--checkbox">
-            <label class="configurations__checkbox-label label" for="black-color">Черный</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="black" value="black"
-              id="black-color">
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--checkbox">
-            <label class="configurations__checkbox-label label" for="pink-color">Розовый</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="pink" value="pink"
-              id="pink-color">
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-          <p class="configurations__group configurations__group--checkbox configurations__group--last">
-            <label class="configurations__checkbox-label label" for="orange-color">Оранжевый</label>
-            <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="orange" value="orange"
-              id="orange-color">
-            <span class="configurations__checkbox-mark"></span>
-          </p>
-        </fieldset>
+        <div class="fieldset__container fieldset__container--secondary">
+          <fieldset class="configurations__fieldset configurations__fieldset--checkbox fieldset">
+            <legend class="configurations__legend">ЦВет</legend>
+            <div class="configurations__group-wrapper">
+              <p class="configurations__group configurations__group--checkbox">
+                <label class="configurations__checkbox-label label" for="white-color">Белый</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="white" value="white"
+                  id="white-color" checked>
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+              <p class="configurations__group configurations__group--checkbox">
+                <label class="configurations__checkbox-label label" for="gray-color">Серый</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="gray" value="gray"
+                  id="gray-color" checked>
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+              <p class="configurations__group configurations__group--checkbox">
+                <label class="configurations__checkbox-label label" for="tiffani-color">Тиффани</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="tiffani" value="tiffani"
+                  id="tiffani-color">
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+              <p class="configurations__group configurations__group--checkbox">
+                <label class="configurations__checkbox-label label" for="black-color">Черный</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="black" value="black"
+                  id="black-color">
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+              <p class="configurations__group configurations__group--checkbox">
+                <label class="configurations__checkbox-label label" for="pink-color">Розовый</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="pink" value="pink"
+                  id="pink-color">
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+              <p class="configurations__group configurations__group--checkbox configurations__group--last">
+                <label class="configurations__checkbox-label label" for="orange-color">Оранжевый</label>
+                <input class="configurations__checkbox-input visually-hidden" type="checkbox" name="orange" value="orange"
+                  id="orange-color">
+                <span class="configurations__checkbox-mark"></span>
+              </p>
+            </div>
+          </fieldset>
+        </div>
 
         <!-- ФИО -->
 
-        <fieldset class="configurations__fieldset configurations__fieldset--name fieldset">
-          <legend class="configurations__legend">ФИО</legend>
-          <p class="configurations__group configurations__group--name">
-            <label class="configurations__name-label label" for="first-name">Имя:</label>
-            <input class="configurations__name-input configurations__name-input--required input" type="text"
-              name="first-name" placeholder="Введите ваше имя*" id="first-name" required>
-          </p>
-          <p class="configurations__group configurations__group--name">
-            <label class="configurations__name-label label" for="second-name">Фамилия:</label>
-            <input class="configurations__name-input configurations__name-input--required input" type="text"
-              name="second-name" placeholder="Укажите фамилию*" id="second-name" required>
-          </p>
-          <p class="configurations__group configurations__group--name configurations__group--last">
-            <label class="configurations__name-label label" for="patronymic-name">Отчество:</label>
-            <input class="configurations__name-input input" type="text" name="patronymic-name"
-              placeholder="Отчество, если желаете" id="patronymic-name">
-          </p>
-        </fieldset>
+        <div class="fieldset__container fieldset__container--default">
+          <fieldset class="configurations__fieldset configurations__fieldset--name fieldset">
+            <legend class="configurations__legend">ФИО</legend>
+            <p class="configurations__group configurations__group--name">
+              <label class="configurations__name-label label" for="first-name">Имя:</label>
+              <input class="configurations__name-input configurations__name-input--required input" type="text"
+                name="first-name" placeholder="Введите ваше имя*" id="first-name" required>
+            </p>
+            <p class="configurations__group configurations__group--name">
+              <label class="configurations__name-label label" for="second-name">Фамилия:</label>
+              <input class="configurations__name-input configurations__name-input--required input" type="text"
+                name="second-name" placeholder="Укажите фамилию*" id="second-name" required>
+            </p>
+            <p class="configurations__group configurations__group--name configurations__group--last">
+              <label class="configurations__name-label label" for="patronymic-name">Отчество:</label>
+              <input class="configurations__name-input input" type="text" name="patronymic-name"
+                placeholder="Отчество, если желаете" id="patronymic-name">
+            </p>
+          </fieldset>
+        </div>
 
         <!-- Телефон -->
 
-        <fieldset class="configurations__fieldset configurations__fieldset--tel fieldset">
-          <legend class="configurations__legend configurations__legend--tel">тел</legend>
-          <p class="configurations__group configurations__group--last">
-            <label class="configurations__tel-label" for="email">
-              <span class="visually-hidden">Введите ваш телефон</span>
-            </label>
-            <input class="configurations__tel-input input input--tel" type="tel"
-              pattern="7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="tel"
-              required>
-          </p>
-        </fieldset>
+        <div class="fieldset__container fieldset__container--secondary">
+          <fieldset class="configurations__fieldset configurations__fieldset--tel fieldset">
+            <legend class="configurations__legend configurations__legend--tel">тел</legend>
+            <p class="configurations__group configurations__group--last">
+              <label class="configurations__tel-label" for="email">
+                <span class="visually-hidden">Введите ваш телефон</span>
+              </label>
+              <input class="configurations__tel-input input input--tel" type="tel"
+                pattern="7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="tel"
+                required>
+            </p>
+          </fieldset>
 
         <!-- Email -->
 
-        <fieldset class="configurations__fieldset configurations__fieldset--email fieldset">
-          <legend class="configurations__legend configurations__legend--email">E-mail</legend>
-          <p class="configurations__group configurations__group--last">
-            <label class="configurations__email-label" for="email">
-              <span class="visually-hidden">Введите ваш емайл</span>
-            </label>
-            <input class="configurations__email-input input input--email" type="email" name="email"
-              placeholder="Ваш Email*" id="email" required>
-          </p>
-        </fieldset>
+          <fieldset class="configurations__fieldset configurations__fieldset--email fieldset">
+            <legend class="configurations__legend configurations__legend--email">E-mail</legend>
+            <p class="configurations__group configurations__group--last">
+              <label class="configurations__email-label" for="email">
+                <span class="visually-hidden">Введите ваш емайл</span>
+              </label>
+              <input class="configurations__email-input input input--email" type="email" name="email"
+                placeholder="Ваш Email*" id="email" required>
+            </p>
+          </fieldset>
+        </div>
 
         <!-- Доп -->
 
-        <fieldset class="configurations__fieldset fieldset">
-          <legend class="configurations__legend configurations__legend--optional">Доп</legend>
-          <label class="configurations__textarea-label" for="textarea"></label>
-          <textarea class="configurations__textarea-field" name="textarea" id="textarea"
-            placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="6"></textarea>
+        <div class="fieldset__container fieldset__container--default">
+          <fieldset class="configurations__fieldset configurations__fieldset--special fieldset">
+            <legend class="configurations__legend configurations__legend--optional">Доп</legend>
+            <label class="configurations__textarea-label" for="textarea"></label>
+            <textarea class="configurations__textarea-field" name="textarea" id="textarea"
+              placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="6"></textarea>
+          </fieldset>
+        </div>
+
+          <!-- Кнопка отправки -->
+        <div class="configurations__wrapper">
           <p class="configurations__promt">*Поля обязательны для заполнения</p>
-        </fieldset>
-        <button class="configurations__submit button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+          <button class="configurations__submit button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+        </div>
       </form>
     </section>
 
