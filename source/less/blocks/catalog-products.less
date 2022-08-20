@@ -1,6 +1,23 @@
 .catalog-products {
   display: grid;
   gap: 30px;
+  width: 260px;
 
-  padding-top: 30px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+
+    padding: 67px 0 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    gap: 51px;
+    width: 1050px;
+
+    padding: 111px 0 57px;
+  }
 }
