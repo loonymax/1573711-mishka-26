@@ -26,6 +26,7 @@
 
 .main-header__list {
   display: grid;
+  position: relative;
 
   margin: 0 auto;
   padding: 0;
@@ -33,11 +34,33 @@
   @media (min-width: @tablet-width) {
     width: 668px;
     grid-template-columns: 334px 334px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/hero-divider-medium.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1050px;
     grid-template-columns: 525px 525px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/hero-divider-big.png");
+    }
   }
 }
 
@@ -53,8 +76,50 @@
 
   color: @white;
   background-color: @lite-green;
-}
+  background-repeat: no-repeat;
 
-.main-header__link--toys {
-  background-color: @dark-green;
+  &--interior {
+    background-image: url("../img/interior.svg");
+    background-position: 233px 23px;
+
+    &:active {
+      background-color: #59d5bc;
+    }
+  }
+
+  &--toys {
+    background-color: @dark-green;
+    background-image: url("../img/toy.svg");
+    background-position: 225px 23px;
+
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 34px;
+
+    &--interior {
+      background-position: 257px 23px;
+    }
+
+    &--toys {
+      background-position: 240px 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      &--interior {
+        background-position: 448px 30px;
+      }
+
+      &--toys {
+        background-position: 430px 30px;
+      }
+    }
+  }
 }

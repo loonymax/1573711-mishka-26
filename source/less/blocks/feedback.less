@@ -1,14 +1,36 @@
 .feedback {
   width: 260px;
+  position: relative;
 
   margin: 0 auto;
   padding: 28px 0 45px;
+
+  background-image: url("../img/divider-small.png");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 
   @media (min-width: @tablet-width) {
     width: 668px;
 
     margin: 0 auto;
     padding: 82px 0 132px;
+
+    background-image: url("../img/divider-medium.png");
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -50px;
+
+      width: 350px;
+      height: 457px;
+
+      background-image: url("../img/feedback.jpg");
+      z-index: -1;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -16,6 +38,10 @@
 
     margin: 0 auto;
     padding: 78px 0 163px;
+
+    background-image: url("../img/divider-big.png");
+    background-position: 0 100%;
+    background-repeat: repeat-x;
   }
 }
 
@@ -131,6 +157,14 @@
   &--next {
     border-right: none;
     transform: rotate(180deg);
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
   }
 }
 
