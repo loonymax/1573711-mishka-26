@@ -1,7 +1,6 @@
 .header {
   position: relative;
 
-  background-color: @white;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -47,11 +46,13 @@
     //   content: "";
     //   position: absolute;
     //   bottom: 0;
+    //   left: -500%;
 
     //   height: 1px;
-    //   width: @tablet-width;
+    //   width: 500vw;
 
     //   background-color: fade(@black, 10%);
+    //   overflow: hidden;
     // }
   }
 
@@ -113,6 +114,16 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
+
+    border-right: 1px solid @lite-gray;
+
+    &--last {
+      border-right: none;
+    }
   }
 }
 

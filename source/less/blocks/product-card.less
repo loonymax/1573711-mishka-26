@@ -5,6 +5,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 334px 335px;
+    grid-template-rows: minmax(51px, auto) minmax(208px, auto) minmax(33px, auto);
     grid-template-areas:
       "image title"
       "image description"
@@ -39,6 +40,10 @@
 
   @media (min-width: @tablet-width) {
     grid-area: title;
+
+    padding-top: 27px;
+    padding-right: 32px;
+    margin-bottom: 0;
   }
 }
 
