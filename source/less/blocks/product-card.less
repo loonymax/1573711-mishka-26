@@ -14,12 +14,21 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 316px;
+    grid-template-rows: 462px minmax(51px, auto) minmax(42px, auto) minmax(72px, auto);
     grid-template-areas:
       "image"
       "title"
       "description"
       "wrapper";
     width: 316px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -30,6 +39,10 @@
 
   @media (min-width: @tablet-width) {
     grid-area: image;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -57,6 +70,10 @@
 
   @media (min-width: @tablet-width) {
     grid-area: description;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
