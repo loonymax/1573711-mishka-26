@@ -5,5 +5,16 @@
 
   text-align: center;
 
-  background-color: @lite-gray;
+  background-color: #f1f1f1;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -80px;
+    padding: 102px 0 95px;
+
+    background-image: url("../img/hero-divider-medium.svg");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+
+    border-top: 1px solid @lite-gray;
+  }
 }

@@ -11,6 +11,10 @@
     padding-top: 54px;
     padding-bottom: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 98px;
+  }
 }
 
 .configurations__description {
@@ -20,10 +24,18 @@
   font-size: 13px;
 
   @media (min-width: @tablet-width) {
+    width: 668px;
+
     font-size: 17px;
     line-height: 30px;
 
-    margin-bottom: 81px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 702px;
+
+    padding-bottom: 12px;
   }
 }
 
@@ -109,6 +121,7 @@
 .configurations__group {
   display: flex;
   align-items: center;
+  position: relative;
 
   margin: 0;
   margin-bottom: 12px;
@@ -186,8 +199,16 @@
   }
 }
 
+.configurations__radio-input:hover + .configurations__radio-mark {
+  border-color: @green;
+}
+
+.configurations__radio-input:active + .configurations__radio-mark {
+  border-color: fade(@black, 30%);
+}
+
 .configurations__checkbox-label {
-  margin-left: 23px;
+  padding-left: 23px;
 }
 
 .configurations__checkbox-mark {
@@ -220,6 +241,36 @@
   }
 }
 
+.configurations__checkbox-input:hover + .configurations__checkbox-mark {
+  border-color: @green;
+}
+
+.configurations__checkbox-input:active + .configurations__checkbox-mark {
+  border-color: fade(@black, 30%);
+}
+
+.configurations__icon {
+  position: absolute;
+  right: 3px;
+  bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    right: 26px;
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 8px;
+
+    &--email {
+      right: 4px;
+    }
+  }
+}
+
 .configurations__textarea-field {
   width: 100%;
   box-sizing: border-box;
@@ -245,6 +296,15 @@
 
   @media (min-width: @desktop-width) {
     width: 700px;
+  }
+
+  &:hover {
+    border-color: @green;
+  }
+
+  &:focus {
+    border-color: @green;
+    outline: none;
   }
 }
 
