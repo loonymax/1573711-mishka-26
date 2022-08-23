@@ -1,8 +1,6 @@
 .main-header__heading {
-  margin: 0 auto;
   padding: 73px 30px 120px;
-
-  width: 260px;
+  margin: 0;
 
   text-align: center;
 
@@ -12,14 +10,13 @@
   background-position: 50% -17px;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
-
+    margin-top: -80px;
     padding: 110px 0 372px;
+
+    border-top: 1px solid @lite-gray;
   }
 
   @media (min-width: @desktop-width) {
-    width: 700px;
-
     padding: 114px 0 355px;
   }
 }
@@ -28,12 +25,15 @@
   display: grid;
   position: relative;
 
-  margin: 0 auto;
   padding: 0;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     grid-template-columns: 334px 334px;
+
+    margin: 0 auto;
+    margin-top: -109px;
 
     &::after {
       content: "";

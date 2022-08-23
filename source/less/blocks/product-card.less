@@ -58,6 +58,10 @@
     padding-right: 32px;
     margin-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    border-top: 1px solid @lite-gray;
+  }
 }
 
 .product-card__description {
@@ -104,4 +108,16 @@
 
 .product-card__button {
   padding: 40px;
+
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 27px 27px;
+
+  &:hover {
+    background-image: url("../img/basket-hover.svg");
+  }
+
+  &:active {
+    .active();
+  }
 }
