@@ -1,6 +1,7 @@
 .header {
   position: relative;
 
+  margin: 0 auto;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -11,8 +12,6 @@
       "site-list promt";
 
     width: 668px;
-
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,8 +22,48 @@
 
     width: 1050px;
     max-width: 1200px;
+  }
+}
 
-    margin: 0 auto;
+@media (max-width: (@tablet-width - 1)) {
+
+  .header {
+    background-color: @white;
+  }
+
+  .header--closed .header__site-list,
+  .header--closed .header__user-list {
+    display: none;
+  }
+
+  .header--opened {
+    position: fixed;
+    width: 100vw;
+
+    z-index: 1;
+  }
+
+  .header--opened ~ .index-body__main,
+  .header--opened ~ .form-body__main,
+  .header--opened ~ .catalog-body__main,
+  .header--opened ~ .footer {
+    transform: translateY(85px);
+
+  }
+
+  .header--opened .header__button-toggle {
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .header--nojs .header__button-toggle {
+    display: none;
   }
 }
 
