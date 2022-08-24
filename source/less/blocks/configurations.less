@@ -207,6 +207,10 @@
   border-color: fade(@black, 30%);
 }
 
+.configurations__radio-input:focus + .configurations__radio-mark {
+  outline: 2px solid @green;
+}
+
 .configurations__checkbox-label {
   padding-left: 23px;
 }
@@ -247,6 +251,10 @@
 
 .configurations__checkbox-input:active + .configurations__checkbox-mark {
   border-color: fade(@black, 30%);
+}
+
+.configurations__checkbox-input:focus + .configurations__checkbox-mark {
+  outline: 2px solid @green;
 }
 
 .configurations__icon {
