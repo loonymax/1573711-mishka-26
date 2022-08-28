@@ -1,8 +1,23 @@
 .main-product {
+  position: relative;
   width: 260px;
 
   padding: 31px 0 36px;
   margin: 0 auto;
+
+  @media (max-width: @desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 1000%;
+      height: 6px;
+
+      margin-left: -100%;
+
+      background-image: url("../img/divider-small.svg");
+    }
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -18,21 +33,32 @@
     width: 668px;
     margin: 0 auto;
     padding: 50px 0 69px;
-  }
 
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 132px 292px 525px;
-    column-gap: 43px;
-    grid-template-areas:
-      "feature title image"
-      "feature text image"
-      "feature list image"
-      "feature price image"
-      "feature link image";
+    @media (max-width: @desktop-width) {
+      &::after {
+        height: 17px;
+        background-image: url("../img/divider-medium.svg");
+      }
+    }
 
-    width: 1050px;
-    margin: 0 auto;
-    padding: 71px 0 96px;
+    @media (min-width: @desktop-width) {
+      grid-template-columns: 132px 292px 525px;
+      column-gap: 43px;
+      grid-template-areas:
+        "feature title image"
+        "feature text image"
+        "feature list image"
+        "feature price image"
+        "feature link image";
+
+      width: 1050px;
+      margin: 0 auto;
+      padding: 71px 0 96px;
+
+      background-image: url("../img/divider-big.svg");
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+    }
   }
 }
 

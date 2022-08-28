@@ -6,29 +6,70 @@
     display: grid;
     grid-template-columns: 334px 335px;
     grid-template-areas:
-      "image title"
-      "image description"
-      "image wrapper";
+      "image wrap"
+      "image wrap"
+      "image wrap";
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 316px;
+    grid-template-columns: 315px;
+    grid-template-rows: 462px auto;
     grid-template-areas:
       "image"
-      "title"
-      "description"
-      "wrapper";
+      "wrap";
     width: 316px;
   }
 }
 
 .product-card__image {
   display: block;
+  height: 195px;
 
   margin-bottom: 27.5px;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     grid-area: image;
+    width: 334px;
+    height: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 462px;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}
+
+.product-card__style-wrapper {
+  grid-area: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 335px;
+    grid-template-rows: minmax(51px, auto) minmax(208px, auto) minmax(33px, auto);
+    grid-template-areas:
+      "title"
+      "description"
+      "wrapper";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 315px;
+    grid-template-rows: minmax(51px, auto) minmax(42px, auto) minmax(72px, auto);
+    grid-template-areas:
+      "title"
+      "description"
+      "wrapper";
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -39,6 +80,14 @@
 
   @media (min-width: @tablet-width) {
     grid-area: title;
+
+    padding-top: 27px;
+    padding-right: 32px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-top: 1px solid @lite-gray;
   }
 }
 
@@ -52,6 +101,10 @@
 
   @media (min-width: @tablet-width) {
     grid-area: description;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -82,4 +135,16 @@
 
 .product-card__button {
   padding: 40px;
+
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 27px 27px;
+
+  &:hover {
+    background-image: url("../img/basket-hover.svg");
+  }
+
+  &:active {
+    .active();
+  }
 }

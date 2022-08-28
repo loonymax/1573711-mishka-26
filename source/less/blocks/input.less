@@ -15,13 +15,29 @@
   border-bottom: 2px solid @black;
 
   &--tel {
-    padding-top: 14px;
-    padding-bottom: 20px;
+    padding: 14px 40px 20px 0;
   }
 
   &--email {
     padding-top: 16px;
     padding-bottom: 18px;
+  }
+
+  &:hover {
+    border-color: @green;
+  }
+
+  &:focus {
+    border-color: @green;
+    outline: none;
+  }
+}
+
+.input:hover + .input__icon,
+.input:focus + .input__icon {
+  path {
+    fill: @green;
+    opacity: 1;
   }
 }
 

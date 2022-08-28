@@ -18,4 +18,13 @@
 
   color: @gray;
   border: 2px solid @gray;
+
+  &:hover {
+    background-color: @gray;
+    color: @white;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }

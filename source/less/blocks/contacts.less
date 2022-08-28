@@ -66,10 +66,32 @@
 }
 
 .contacts__heading {
+  position: relative;
+
   margin: 0;
 
   @media (min-width: @tablet-width) {
     grid-column: ~(1/-1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -20px;
+
+      width: 46px;
+      height: 81px;
+
+      background-image: url("../img/flag.svg");
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        left: -110px;
+        top: -7px;
+      }
+    }
   }
 }
 
@@ -87,9 +109,31 @@
 }
 
 .contacts__email {
+  position: relative;
+
   text-decoration: none;
 
   color: @gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+
+    height: 1px;
+
+    background-color: @green;
+  }
+
+  &:hover {
+    color: @green;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
 }
 
 .contacts__adress {
@@ -106,6 +150,10 @@
   @media (min-width: @desktop-width) {
     grid-area: map;
   }
+}
+
+.contacts__map {
+  border: none;
 }
 
 .contacts__link {
