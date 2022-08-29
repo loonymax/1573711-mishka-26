@@ -65,6 +65,7 @@
 }
 
 .configurations__legend {
+  position: relative;
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -82,6 +83,11 @@
     margin-bottom: 4.5px;
   }
 
+  @media (max-width: (@tablet-width - 1)) {
+    background-color: @white;
+    padding-right: 23px;
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 67px;
@@ -97,6 +103,28 @@
 
     &--email {
       top: 17px;
+    }
+  }
+}
+
+.configurations__decor {
+  display: none;
+
+  @media (max-width: (@tablet-width - 1)) {
+    display: block;
+    position: absolute;
+    top: -38px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: @green;
+    z-index: -1;
+
+    &--special {
+      top: -12px;
     }
   }
 }
@@ -180,7 +208,7 @@
   order: -1;
 }
 
-.configurations__radio-input:checked + .configurations__radio-mark {
+.configurations__radio-input:checked+.configurations__radio-mark {
   position: relative;
 
   &::before {
@@ -199,15 +227,15 @@
   }
 }
 
-.configurations__radio-input:hover + .configurations__radio-mark {
+.configurations__radio-input:hover+.configurations__radio-mark {
   border-color: @green;
 }
 
-.configurations__radio-input:active + .configurations__radio-mark {
+.configurations__radio-input:active+.configurations__radio-mark {
   border-color: fade(@black, 30%);
 }
 
-.configurations__radio-input:focus + .configurations__radio-mark {
+.configurations__radio-input:focus+.configurations__radio-mark {
   outline: 2px solid @green;
 }
 
@@ -226,7 +254,7 @@
   order: -1;
 }
 
-.configurations__checkbox-input:checked + .configurations__checkbox-mark {
+.configurations__checkbox-input:checked+.configurations__checkbox-mark {
   position: relative;
 
   &::before {
@@ -245,15 +273,15 @@
   }
 }
 
-.configurations__checkbox-input:hover + .configurations__checkbox-mark {
+.configurations__checkbox-input:hover+.configurations__checkbox-mark {
   border-color: @green;
 }
 
-.configurations__checkbox-input:active + .configurations__checkbox-mark {
+.configurations__checkbox-input:active+.configurations__checkbox-mark {
   border-color: fade(@black, 30%);
 }
 
-.configurations__checkbox-input:focus + .configurations__checkbox-mark {
+.configurations__checkbox-input:focus+.configurations__checkbox-mark {
   outline: 2px solid @green;
 }
 
