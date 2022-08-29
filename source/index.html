@@ -100,8 +100,17 @@
           <dd class="main-product__descrtiption">15 см</dd>
         </div>
       </dl>
-      <img class="main-product__image" src="./img/main-product.jpg" width="260" height="315"
-        alt="Три вязаных корзинки в руках.">
+      <div class="main-product__container">
+        <picture>
+          <source media="(min-width: 1150px)"
+          srcset="./img/main-product-desktop@1x.jpg 1x, ./img/main-product-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="./img/main-product-tablet@1x.jpg 1x, ./img/main-product-tablet@2x.jpg 2x">
+          <img class="main-product__image" src="./img/main-product-mobile@1x.jpg"
+            srcset="./img/main-product-mobile@1x.jpg 1x, ./img/main-product-mobile@2x.jpg 2x" width="260" height="315"
+            alt="Три вязаных корзинки в руках.">
+        </picture>
+      </div>
       <b class="main-product__price">Цена: 990 руб.</b>
       <a class="main-product__link link link--default" href="#">ЗАКАЗАТЬ</a>
     </section>

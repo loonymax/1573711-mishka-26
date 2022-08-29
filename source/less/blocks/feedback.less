@@ -29,7 +29,6 @@
     margin: 0 auto;
     padding: 82px 0 132px;
 
-    background-image: url("../img/divider-medium.png");
     background-position: 0 100%;
     background-repeat: repeat-x;
 
@@ -42,8 +41,13 @@
       width: 350px;
       height: 457px;
 
-      background-image: url("../img/feedback.jpg");
+      background-image: url("../img/feedback@1x.jpg");
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feedback@2x.jpg");
+        background-size: 100% auto;
+      }
     }
 
     @media (max-width: @desktop-width) {
