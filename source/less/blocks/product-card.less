@@ -21,6 +21,12 @@
   }
 }
 
+.product-card__picture {
+  @media (min-width: @tablet-width) {
+    grid-area: image;
+  }
+}
+
 .product-card__image {
   display: block;
   height: 195px;
@@ -29,7 +35,6 @@
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    grid-area: image;
     width: 334px;
     height: 100%;
   }
