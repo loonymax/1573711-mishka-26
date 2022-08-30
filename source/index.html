@@ -22,7 +22,11 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <a class="header__logo-link" href="#">
-      <img class="header__logo-image" src="./img/logo-mobile.svg" width="85" height="34" alt="Логотип магазина Мишка.">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+        <img class="header__logo-image" src="./img/logo-mobile.svg" width="85" height="34" alt="Логотип магазина Мишка.">
+      </picture>
     </a>
     <ul class="header__site-list">
       <li class="header__site-item">

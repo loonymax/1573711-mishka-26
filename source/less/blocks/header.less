@@ -77,6 +77,7 @@
   padding: 22px;
 
   @media (min-width: @tablet-width) {
+    width: 113px;
     margin-left: 0;
   }
 
@@ -86,6 +87,23 @@
 
   &:active {
     .active();
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    padding: 8px;
+  }
+}
+
+.header__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
   }
 }
 
