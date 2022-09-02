@@ -47,12 +47,13 @@
   justify-content: center;
   align-items: center;
 
-  padding: 29px 0;
+  padding: 19px 0;
 
   border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
     border: none;
+    align-items: baseline;
   }
 }
 
@@ -64,6 +65,10 @@
 
 .footer__link {
   margin-left: 27px;
+
+  svg {
+    vertical-align: middle;
+  }
 
   &:hover {
     path {

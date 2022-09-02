@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка, форма вязаного заказа</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+  <link rel="manifest" href="../manifest.webmanifest">
 </head>
 
 <body class="page__body form-body">
@@ -17,7 +21,11 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <a class="header__logo-link" href="index.html">
-      <img class="header__logo-image" src="./img/logo-mobile.svg" width="85" height="34" alt="Логотип магазина Мишка.">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+        <img class="header__logo-image" src="./img/logo-mobile.svg" width="85" height="34" alt="Логотип магазина Мишка.">
+      </picture>
     </a>
     <ul class="header__site-list">
       <li class="header__site-item">
@@ -76,6 +84,7 @@
         <div class="fieldset__container fieldset__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--radio fieldset">
             <legend class="configurations__legend">ТИП</legend>
+            <span class="configurations__decor"></span>
             <p class="configurations__group">
               <label class="configurations__radio-label label" for="radio-accessory">Аксессуар для интерьера</label>
               <input class="configurations__radio-input visually-hidden" type="radio" name="radio-type"
@@ -96,6 +105,7 @@
         <div class="fieldset__container fieldset__container--secondary">
           <fieldset class="configurations__fieldset configurations__fieldset--checkbox fieldset">
             <legend class="configurations__legend configurations__legend--checkbox">ЦВет</legend>
+            <span class="configurations__decor"></span>
             <div class="configurations__group-wrapper">
               <p class="configurations__group configurations__group--checkbox">
                 <label class="configurations__checkbox-label label" for="white-color">Белый</label>
@@ -142,6 +152,7 @@
         <div class="fieldset__container fieldset__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--name fieldset">
             <legend class="configurations__legend">ФИО</legend>
+            <span class="configurations__decor"></span>
             <p class="configurations__group configurations__group--name">
               <label class="configurations__name-label label" for="first-name">Имя:</label>
               <input class="configurations__name-input configurations__name-input--required input" type="text"
@@ -165,6 +176,7 @@
         <div class="fieldset__container fieldset__container--secondary">
           <fieldset class="configurations__fieldset configurations__fieldset--tel fieldset">
             <legend class="configurations__legend configurations__legend--tel">тел</legend>
+            <span class="configurations__decor configurations__decor--special"></span>
             <p class="configurations__group configurations__group--last">
               <label class="configurations__tel-label" for="email">
                 <span class="visually-hidden">Введите ваш телефон</span>
@@ -187,6 +199,7 @@
 
           <fieldset class="configurations__fieldset configurations__fieldset--email fieldset">
             <legend class="configurations__legend configurations__legend--email">E-mail</legend>
+            <span class="configurations__decor configurations__decor--special"></span>
             <p class="configurations__group configurations__group--last">
               <label class="configurations__email-label" for="email">
                 <span class="visually-hidden">Введите ваш емайл</span>
@@ -208,6 +221,7 @@
         <div class="fieldset__container fieldset__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--special fieldset">
             <legend class="configurations__legend configurations__legend--optional">Доп</legend>
+            <span class="configurations__decor"></span>
             <label class="configurations__textarea-label" for="textarea"></label>
             <textarea class="configurations__textarea-field" name="textarea" id="textarea"
               placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="6"></textarea>

@@ -1,8 +1,12 @@
 .contacts {
-  padding: 44px 0 39px;
+  padding: 45px 0 39px;
+
+  font-size: 14px;
 
   @media (min-width: @tablet-width) {
-    padding: 69px 0 57px;
+    padding: 72px 0 62px;
+
+    font-size: 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -71,7 +75,7 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    grid-column: ~(1/-1);
+    grid-column: 1/-1;
 
     &::after {
       content: "";
@@ -141,10 +145,10 @@
 }
 
 .contacts__map-wrapper {
-  margin-bottom: 41px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -159,10 +163,13 @@
 .contacts__link {
   justify-self: center;
   display: inline-block;
-  min-width: 230px;
+  min-width: 260px;
 
   @media (min-width: @tablet-width) {
     justify-self: center;
+    min-width: 230px;
+
+    font-size: 17px;
   }
 
   @media (min-width: @desktop-width) {

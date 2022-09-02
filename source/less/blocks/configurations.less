@@ -65,6 +65,7 @@
 }
 
 .configurations__legend {
+  position: relative;
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -82,6 +83,11 @@
     margin-bottom: 4.5px;
   }
 
+  @media (max-width: (@tablet-width - 1)) {
+    background-color: @white;
+    padding-right: 23px;
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 67px;
@@ -97,6 +103,28 @@
 
     &--email {
       top: 17px;
+    }
+  }
+}
+
+.configurations__decor {
+  display: none;
+
+  @media (max-width: (@tablet-width - 1)) {
+    display: block;
+    position: absolute;
+    top: -38px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: @green;
+    z-index: -1;
+
+    &--special {
+      top: -12px;
     }
   }
 }
