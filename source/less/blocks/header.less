@@ -74,7 +74,7 @@
 
   margin-left: auto;
   margin-right: auto;
-  padding: 22px;
+  padding: 22px 0 17px;
 
   @media (min-width: @tablet-width) {
     width: 113px;
@@ -146,7 +146,7 @@
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 37px;
   }
 }
 
@@ -187,6 +187,7 @@
 }
 
 .header__user-item {
+  align-self: center;
   list-style-type: none;
 
   border-top: 1px solid @lite-gray;
@@ -236,6 +237,7 @@
 
       @media (min-width: @tablet-width) {
         margin-left: 33px;
+        margin-top: 12px;
       }
     }
   }
@@ -251,17 +253,19 @@
         margin-left: -51px;
       }
     }
-
-    @media (min-width: @tablet-width) {
-      text-align: end;
-      font-size: 17px;
-    }
   }
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
+    padding-top: 19px;
 
     font-size: 15px;
+
+    &--basket {
+      padding-top: 28px;
+      font-size: 17px;
+      text-align: end;
+    }
   }
 
   &:hover {
@@ -291,9 +295,9 @@
   @media (min-width: @tablet-width) {
     display: block;
     justify-self: end;
-    align-self: center;
 
     margin: 0;
+    padding-top: 18px;
 
     font-size: 15px;
   }

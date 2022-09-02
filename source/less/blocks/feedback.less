@@ -10,6 +10,8 @@
   background-position: 0 100%;
 
   @media (max-width: @desktop-width) {
+    background-image: none;
+
     &::after {
       content: "";
       position: absolute;
@@ -27,7 +29,7 @@
     width: 668px;
 
     margin: 0 auto;
-    padding: 82px 0 132px;
+    padding: 79px 0 132px;
 
     background-position: 0 100%;
     background-repeat: repeat-x;
@@ -35,7 +37,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -10px;
+      top: 0;
       left: -50px;
 
       width: 350px;
@@ -50,12 +52,9 @@
       }
     }
 
-    @media (max-width: @desktop-width) {
-      &::after {
-        height: 17px;
-
-        background-image: url("../img/divider-medium.svg");
-      }
+    &::after {
+      height: 17px;
+      background-image: url("../img/divider-medium.svg");
     }
   }
 
@@ -102,6 +101,8 @@
 
   @media (min-width: @tablet-width) {
     grid-area: title;
+
+    padding: 4px 0 0;
   }
 }
 
@@ -131,6 +132,16 @@
 
   color: @gray;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+
+    font-size: 17px;
+
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 44px;
   }
@@ -139,6 +150,10 @@
 .feedback__author {
   font-size: 17px;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .feedback__author-link {
@@ -154,7 +169,7 @@
   color: @gray;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding: 5px 0 0;
   }
 }
 
@@ -168,15 +183,17 @@
     grid-area: controls;
     justify-self: end;
     align-self: end;
+    grid-template-columns: 50px 50px;
+    column-gap: 37px;
 
     margin: 0;
+    margin-right: 18px;
   }
 }
 
 .feedback__button {
   position: relative;
 
-  min-width: 130px;
   min-height: 52px;
 
   background-image: url("../../img/arrow.svg");
@@ -188,6 +205,10 @@
   &--next {
     border-right: none;
     transform: rotate(180deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 
   &:hover {
