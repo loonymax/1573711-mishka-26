@@ -91,7 +91,7 @@
 
   @media (min-width: @desktop-width) {
     width: 149px;
-    padding: 8px;
+    padding: 8px 0 0;
   }
 }
 
@@ -147,6 +147,13 @@
     justify-content: start;
     flex-wrap: wrap;
     gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .header__link {
+      font-size: 17px;
+      padding-top: 32px;
+    }
   }
 }
 
@@ -208,7 +215,11 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 45px;
+    gap: 62px;
+
+    .header__link {
+      padding-top: 17px;
+    }
   }
 }
 
@@ -266,12 +277,21 @@
       font-size: 17px;
       text-align: end;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 28px;
+      padding-bottom: 33px;
+    }
+  }
+
+  svg {
+    opacity: 0.2;
   }
 
   &:hover {
     color: fade(@black, 60%);
 
-    .header__path {
+    svg {
       fill: @lite-green;
       opacity: 1;
     }
