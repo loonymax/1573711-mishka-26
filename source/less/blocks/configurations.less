@@ -30,6 +30,7 @@
     line-height: 30px;
 
     margin: 0 auto;
+    padding-bottom: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -65,6 +66,10 @@
     &--email {
       padding-top: 0;
     }
+
+    &--name {
+      padding-top: 51px;
+    }
   }
 }
 
@@ -93,7 +98,7 @@
   }
 
   &--email {
-    margin-bottom: 4.5px;
+    margin-bottom: 5px;
   }
 
   &--optional {
@@ -109,6 +114,10 @@
     position: absolute;
     top: 67px;
     left: 0;
+
+    &--email {
+      top: 17px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -158,9 +167,9 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 24px;
+    row-gap: 23px;
     column-gap: 10px;
-    width: 500px;
+    width: 512px;
 
     margin-left: auto;
   }
@@ -197,10 +206,21 @@
   @media (min-width: @tablet-width) {
     width: 500px;
     margin-left: auto;
+    margin-bottom: 25px;
 
     &--checkbox {
       width: 240px;
 
+      margin-bottom: 0;
+    }
+
+    &--name {
+      flex-direction: row;
+      align-items: center;
+      column-gap: 24px;
+    }
+
+    &--last {
       margin-bottom: 0;
     }
   }
@@ -219,6 +239,11 @@
 .configurations__radio-label {
   max-width: 194px;
   margin-left: 19px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 354px;
+    margin-left: 28px;
+  }
 }
 
 .configurations__radio-mark {
@@ -231,6 +256,11 @@
   border-radius: 50%;
 
   order: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .configurations__radio-input:checked + .configurations__radio-mark {
@@ -266,6 +296,10 @@
 
 .configurations__checkbox-label {
   padding-left: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 29px;
+  }
 }
 
 .configurations__checkbox-mark {
@@ -277,6 +311,11 @@
   border: 2px solid @gray;
 
   order: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 53px;
+  }
 }
 
 .configurations__checkbox-input:checked + .configurations__checkbox-mark {
@@ -295,6 +334,13 @@
     background-repeat: no-repeat;
 
     transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      width: 32px;
+      height: 22px;
+
+      transform: translate(-30%, -28%) scale(1.4);
+    }
   }
 }
 
@@ -358,6 +404,7 @@
     width: 500px;
 
     margin-left: auto;
+    margin-bottom: 6px;
   }
 
   @media (min-width: @desktop-width) {
