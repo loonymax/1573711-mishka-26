@@ -1,7 +1,13 @@
 .fieldset {
   position: relative;
 
+  margin-left: 0;
+  margin-right: 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 .fieldset__container {

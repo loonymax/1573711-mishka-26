@@ -5,10 +5,8 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 334px 335px;
-    grid-template-areas:
-      "image wrap"
-      "image wrap"
-      "image wrap";
+    grid-template-rows: minmax(334px, auto), minmax(334px, auto);
+    grid-template-areas: "image wrap";
   }
 
   @media (min-width: @desktop-width) {
@@ -31,12 +29,14 @@
   display: block;
   height: 195px;
 
-  margin-bottom: 27.5px;
+  margin-bottom: 27px;
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 100%;
+
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,7 +53,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 335px;
-    grid-template-rows: minmax(51px, auto) minmax(208px, auto) minmax(33px, auto);
+    grid-template-rows: minmax(51px, auto) 1fr minmax(73px, auto);
     grid-template-areas:
       "title"
       "description"
@@ -62,7 +62,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 315px;
-    grid-template-rows: minmax(51px, auto) minmax(42px, auto) minmax(72px, auto);
+    grid-template-rows: minmax(51px, auto) minmax(41px, 1fr) minmax(72px, auto);
     grid-template-areas:
       "title"
       "description"
@@ -83,22 +83,28 @@
   margin-bottom: 6px;
   padding-left: 28px;
 
+  font-size: 17px;
+
   @media (min-width: @tablet-width) {
     grid-area: title;
 
-    padding-top: 27px;
-    padding-right: 32px;
-    margin-bottom: 0;
+    padding-top: 26px;
+    padding-left: 32px;
+    margin-bottom: 8px;
+
+    font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 27px;
+
     border-top: 1px solid @lite-gray;
   }
 }
 
 .product-card__description {
   margin: 0;
-  margin-bottom: 17.5px;
+  margin-bottom: 17px;
   padding-left: 28px;
 
   font-size: 13px;
@@ -106,10 +112,16 @@
 
   @media (min-width: @tablet-width) {
     grid-area: description;
+
+    padding-left: 32px;
+
+    font-size: 15px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+
+    padding-left: 27px;
   }
 }
 
@@ -136,14 +148,32 @@
       grid-area: wrapper;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+  }
+}
+
+.product-card__price {
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .product-card__button {
-  padding: 40px;
+  padding: 36px;
 
   background-image: url("../img/basket.svg");
   background-repeat: no-repeat;
-  background-position: 27px 27px;
+  background-position: 26px 23px;
+
+  @media (min-width: @desktop-width) {
+    background-position: 19px 25px;
+  }
 
   &:hover {
     background-image: url("../img/basket-hover.svg");

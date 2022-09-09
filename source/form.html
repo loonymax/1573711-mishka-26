@@ -68,8 +68,10 @@
     <p class="header__promt">Бесплатная доставка по России</p>
   </header>
 
+  <!-- Основное содержание -->
+
   <main class="form-body__main form-main">
-    <h1 class="form-main__heading heading">Вязание на заказ</h1>
+    <h1 class="form-main__heading">Вязание на заказ</h1>
 
     <!-- Форма заказа  -->
 
@@ -83,7 +85,7 @@
 
         <div class="fieldset__container fieldset__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--radio fieldset">
-            <legend class="configurations__legend">ТИП</legend>
+            <legend class="configurations__legend configurations__legend--type">ТИП</legend>
             <span class="configurations__decor"></span>
             <p class="configurations__group">
               <label class="configurations__radio-label label" for="radio-accessory">Аксессуар для интерьера</label>
@@ -105,7 +107,7 @@
         <div class="fieldset__container fieldset__container--secondary">
           <fieldset class="configurations__fieldset configurations__fieldset--checkbox fieldset">
             <legend class="configurations__legend configurations__legend--checkbox">ЦВет</legend>
-            <span class="configurations__decor"></span>
+            <span class="configurations__decor configurations__decor--color"></span>
             <div class="configurations__group-wrapper">
               <p class="configurations__group configurations__group--checkbox">
                 <label class="configurations__checkbox-label label" for="white-color">Белый</label>
@@ -221,7 +223,7 @@
         <div class="fieldset__container fieldset__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--special fieldset">
             <legend class="configurations__legend configurations__legend--optional">Доп</legend>
-            <span class="configurations__decor"></span>
+            <span class="configurations__decor configurations__decor--optional"></span>
             <label class="configurations__textarea-label" for="textarea"></label>
             <textarea class="configurations__textarea-field" name="textarea" id="textarea"
               placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="6"></textarea>

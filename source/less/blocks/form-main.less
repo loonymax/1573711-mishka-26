@@ -1,20 +1,31 @@
 .form-main__heading {
   margin: 0;
-  padding-top: 73px;
-  padding-bottom: 73px;
+  padding: 73px 0 79px;
 
+  font-size: 27px;
   text-align: center;
 
   background-color: #f1f1f1;
 
   @media (min-width: @tablet-width) {
-    margin-top: -80px;
-    padding: 102px 0 95px;
+    margin-top: -75px;
+    padding: 102px 0 85px;
+
+    font-size: 43px;
+    line-height: 50px;
 
     background-image: url("../img/hero-divider-medium.svg");
     background-repeat: repeat-x;
     background-position: 0 100%;
 
     border-top: 1px solid @lite-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+
+    background-image: url("../img/hero-divider-big.svg");
+    padding: 102px 0 114px;
   }
 }
