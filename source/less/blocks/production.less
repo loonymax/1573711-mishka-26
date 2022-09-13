@@ -117,6 +117,7 @@
   position: absolute;
   top: 135px;
   left: 79px;
+  transition: transform 0.2s ease;
 
   @media (min-width: @tablet-width) {
     top: 185px;
@@ -126,6 +127,15 @@
   @media (min-width: @desktop-width) {
     top: 188px;
     left: 291px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 }
 
