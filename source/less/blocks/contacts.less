@@ -163,13 +163,21 @@
 
 .contacts__map-wrapper {
   margin-bottom: 34px;
+  width: 100%;
+  height: 454px;
+
+  background-image: url("../img/map-mobile.webp");
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
+
+    background-image: url("../img/map-tablet.webp");
   }
 
   @media (min-width: @desktop-width) {
     grid-area: map;
+
+    background-image: url("../img/map-desktop.webp");
   }
 }
 
