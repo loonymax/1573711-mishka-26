@@ -5,18 +5,18 @@
   padding: 33px 0 41px;
   margin: 0 auto;
 
-  @media (max-width: @desktop-width) {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 1000%;
-      height: 6px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 1000%;
+    height: 6px;
 
-      margin-left: -100%;
+    margin-left: -100%;
 
-      background-image: url("../img/divider-small.svg");
-    }
+    background-image: url("../img/divider-small.svg");
+    background-size: 16px auto;
+    background-position-x: 6px;
   }
 
   @media (min-width: @tablet-width) {
@@ -33,13 +33,12 @@
     width: 668px;
     margin: 0 auto;
     padding: 38px 0 69px;
-  }
 
-  @media (max-width: @desktop-width) {
     &::after {
       height: 17px;
       background-image: url("../img/divider-medium.svg");
-      background-size: 38.5px auto;
+      background-size: 38px auto;
+      background-position: 13px 100%;
     }
   }
 
@@ -58,9 +57,13 @@
     padding: 73px 0 96px;
 
     background-image: url("../img/divider-big.svg");
-    background-position: 0 100%;
+    background-position: 5px 100%;
     background-repeat: repeat-x;
-    background-size: 52.5px auto;
+    background-size: 52px auto;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
