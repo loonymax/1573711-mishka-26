@@ -19,6 +19,7 @@
 
 .configurations__container {
   @media (min-width: @tablet-width) {
+
     &--secondary {
       background-color: #f1f1f1;
     }
@@ -397,6 +398,16 @@
   svg {
     opacity: 0.2;
   }
+}
+
+.configurations__input-icon {
+  opacity: 0.2;
+}
+
+.configurations__input:hover + .configurations__input-icon,
+.configurations__input:focus + .configurations__input-icon {
+  fill: @green;
+  opacity: 1;
 }
 
 .configurations__textarea-field {

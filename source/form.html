@@ -82,7 +82,7 @@
 
         <!-- Радиокнопки -->
 
-        <div class="configuration__container configuration__container--default">
+        <div class="configurations__container configurations__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--radio fieldset">
             <legend class="configurations__legend configurations__legend--type">ТИП</legend>
             <span class="configurations__decor"></span>
@@ -103,7 +103,7 @@
 
         <!-- Чекбоксы -->
 
-        <div class="configuration__container configuration__container--secondary">
+        <div class="configurations__container configurations__container--secondary">
           <fieldset class="configurations__fieldset configurations__fieldset--checkbox fieldset">
             <legend class="configurations__legend configurations__legend--checkbox">ЦВет</legend>
             <span class="configurations__decor configurations__decor--color"></span>
@@ -150,23 +150,23 @@
 
         <!-- ФИО -->
 
-        <div class="configuration__container configuration__container--default">
+        <div class="configurations__container configurations__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--name fieldset">
             <legend class="configurations__legend">ФИО</legend>
             <span class="configurations__decor"></span>
             <p class="configurations__group configurations__group--name">
               <label class="configurations__name-label label" for="first-name">Имя:</label>
-              <input class="configurations__name-input configurations__name-input--required input" type="text"
+              <input class="configurations__input configurations__name-input configurations__name-input--required input" type="text"
                 name="first-name" placeholder="Введите ваше имя*" id="first-name" required>
             </p>
             <p class="configurations__group configurations__group--name">
               <label class="configurations__name-label label" for="second-name">Фамилия:</label>
-              <input class="configurations__name-input configurations__name-input--required input" type="text"
+              <input class="configurations__input configurations__name-input configurations__name-input--required input" type="text"
                 name="second-name" placeholder="Укажите фамилию*" id="second-name" required>
             </p>
             <p class="configurations__group configurations__group--name configurations__group--last">
               <label class="configurations__name-label label" for="patronymic-name">Отчество:</label>
-              <input class="configurations__name-input input" type="text" name="patronymic-name"
+              <input class="configurations__input configurations__name-input input" type="text" name="patronymic-name"
                 placeholder="Отчество, если желаете" id="patronymic-name">
             </p>
           </fieldset>
@@ -174,7 +174,7 @@
 
         <!-- Телефон -->
 
-        <div class="configuration__container configuration__container--secondary">
+        <div class="configurations__container configurations__container--secondary">
           <fieldset class="configurations__fieldset configurations__fieldset--tel fieldset">
             <legend class="configurations__legend configurations__legend--tel">тел</legend>
             <span class="configurations__decor configurations__decor--special"></span>
@@ -182,10 +182,10 @@
               <label class="configurations__tel-label" for="email">
                 <span class="visually-hidden">Введите ваш телефон</span>
               </label>
-              <input class="configurations__tel-input input input--tel" type="tel"
+              <input class="configurations__input configurations__tel-input input input--tel" type="tel"
                 pattern="7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="tel"
                 required>
-              <svg class="configurations__icon input input__icon" aria-hidden="true" focusable="false" width="25" height="24"
+              <svg class="configurations__icon configurations__input-icon" aria-hidden="true" focusable="false" width="25" height="24"
                 viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite.svg#phone" />
               </svg>
@@ -201,9 +201,9 @@
               <label class="configurations__email-label" for="email">
                 <span class="visually-hidden">Введите ваш емайл</span>
               </label>
-              <input class="configurations__email-input input input--email" type="email" name="email"
+              <input class="configurations__input configurations__email-input input input--email" type="email" name="email"
                 placeholder="Ваш Email*" id="email" required>
-              <svg class="configurations__icon configurations__icon--email input input__icon" aria-hidden="true"
+              <svg class="configurations__icon configurations__icon--email configurations__input-icon" aria-hidden="true"
                 focusable="false" width="32" height="21" viewBox="0 0 32 21" xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite.svg#email" />
               </svg>
@@ -213,7 +213,7 @@
 
         <!-- Доп -->
 
-        <div class="configuration__container configuration__container--default">
+        <div class="configurations__container configurations__container--default">
           <fieldset class="configurations__fieldset configurations__fieldset--special fieldset">
             <legend class="configurations__legend configurations__legend--optional">Доп</legend>
             <span class="configurations__decor configurations__decor--optional"></span>
