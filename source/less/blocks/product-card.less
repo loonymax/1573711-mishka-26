@@ -102,6 +102,12 @@
   }
 }
 
+.product-card__description-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-area: description;
+  }
+}
+
 .product-card__description {
   margin: 0;
   margin-bottom: 17px;
@@ -111,8 +117,6 @@
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    grid-area: description;
-
     padding-left: 32px;
 
     font-size: 15px;
